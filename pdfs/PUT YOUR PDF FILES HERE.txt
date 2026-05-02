@@ -1,0 +1,14 @@
+Place your PDF files in this folder using these exact names:
+
+Authoring with Adobe FrameMaker.pdf
+Mock Grant Proposal.pdf
+Technical Description.pdf
+Literary Friendships Essay.pdf
+Queer Coded Poetry Essay.pdf
+Feminist Poetics Essay.pdf
+Fiction Short Story.pdf
+Dialogue Story.pdf
+Poem.pdf
+Budget Recommendations Memo.pdf
+Mock Floor Speech.pdf
+Mock Press Release.pdf

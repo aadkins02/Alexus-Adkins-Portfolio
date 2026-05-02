@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alexus Adkins: Writing Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+:root { --beige:#f6efe4; --cream:#fffaf2; --soft-green:#dcebd5; --medium-green:#8fb08c; --dark-green:#355e3b; --black:#1f1f1f; --shadow:0 18px 40px rgba(53,94,59,.16); }
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { background:var(--beige); color:var(--black); font-family:"Quicksand", sans-serif; line-height:1.65; }
+body::before { content:""; position:fixed; inset:0; z-index:-1; background:radial-gradient(circle at 15% 18%, rgba(143,176,140,.25), transparent 18%), radial-gradient(circle at 88% 20%, rgba(143,176,140,.22), transparent 16%), radial-gradient(circle at 20% 80%, rgba(143,176,140,.18), transparent 18%), radial-gradient(circle at 80% 78%, rgba(143,176,140,.18), transparent 18%); }
+.page-wrap { width:min(1120px, calc(100% - 32px)); margin:0 auto; }
+header { padding:56px 0 26px; text-align:center; }
+h1,h2,h3,h4 { font-family:"Playfair Display", serif; color:var(--dark-green); }
+h1 { font-size:clamp(2.4rem,7vw,5.2rem); font-style:italic; line-height:1.05; margin-bottom:16px; }
+.subtitle-line { width:130px; height:5px; background:var(--medium-green); border-radius:999px; margin:0 auto; }
+nav { margin:24px auto 0; display:flex; flex-wrap:wrap; justify-content:center; gap:10px; }
+nav a { text-decoration:none; background:rgba(255,250,242,.9); border:1px solid var(--medium-green); color:var(--dark-green); padding:10px 16px; border-radius:999px; font-weight:700; box-shadow:0 8px 18px rgba(53,94,59,.09); }
+section { margin:34px 0; }
+.hero-card,.about-card,.section-card { background:rgba(255,250,242,.92); border:2px solid rgba(143,176,140,.65); border-radius:34px; box-shadow:var(--shadow); }
+.hero-card { display:grid; grid-template-columns:1.1fr .9fr; gap:34px; align-items:center; padding:clamp(24px,5vw,44px); }
+.hero-card h2,.about-card h2,.assignments-heading { font-size:clamp(2rem,5vw,3rem); font-style:italic; margin-bottom:14px; }
+.hero-card p { font-size:1.12rem; }
+.profile-photo-wrap { justify-self:center; width:min(100%,340px); border:8px solid var(--dark-green); border-radius:34px; padding:8px; background:var(--soft-green); box-shadow:0 18px 32px rgba(53,94,59,.24); overflow:hidden; }
+.profile-photo-wrap img { display:block; width:100%; height:auto; border-radius:24px; }
+.about-card { background:rgba(220,235,213,.78); padding:clamp(24px,5vw,42px); }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:34px; }
+.about-card h2,.assignments-heading { text-align:center; }
+.about-card h3 { font-size:1.65rem; font-style:italic; margin-bottom:12px; }
+ul { padding-left:22px; }
+.skills { display:flex; flex-wrap:wrap; gap:10px; }
+.skill-pill { display:inline-flex; background:#eef7e9; border:1px solid var(--medium-green); color:var(--black); padding:9px 13px; border-radius:999px; font-weight:600; font-size:.94rem; }
+.assignments-heading { margin:48px 0 22px; }
+.section-card { padding:clamp(22px,4vw,34px); margin-bottom:34px; }
+.section-card h3 { font-size:clamp(1.75rem,4vw,2.35rem); font-style:italic; margin-bottom:24px; }
+.assignment-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.assignment-card { display:flex; flex-direction:column; gap:14px; background:rgba(248,251,245,.95); border:1px solid #cfe0c6; border-radius:26px; padding:22px; min-height:100%; box-shadow:0 10px 20px rgba(53,94,59,.08); }
+.assignment-card h4 { font-size:1.32rem; line-height:1.2; }
+.assignment-card p { font-style:italic; color:#303030; font-size:.98rem; flex:1; }
+.assignment-button { display:inline-flex; justify-content:center; align-items:center; text-align:center; text-decoration:none; background:var(--dark-green); color:white; border-radius:999px; padding:12px 18px; font-weight:700; box-shadow:0 9px 18px rgba(53,94,59,.22); transition:transform .2s ease, background .2s ease; }
+.assignment-button:hover,.assignment-button:focus { background:#4d7a52; transform:translateY(-2px); }
+footer { margin-top:50px; background:var(--soft-green); border-top:4px solid var(--medium-green); padding:34px 16px; text-align:center; }
+.footer-icons { display:flex; justify-content:center; gap:16px; margin-bottom:14px; }
+.footer-icons a { width:52px; height:52px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:var(--dark-green); color:white; box-shadow:0 10px 20px rgba(53,94,59,.24); transition:transform .2s ease, background .2s ease; }
+.footer-icons a:hover,.footer-icons a:focus { background:#4d7a52; transform:translateY(-2px); }
+.footer-icons svg { width:25px; height:25px; }
+footer p { color:var(--dark-green); font-weight:700; }
+@media (max-width:900px) { .hero-card,.about-grid { grid-template-columns:1fr; } .hero-card { text-align:center; } .assignment-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:620px) { .page-wrap { width:min(100% - 22px,1120px); } header { padding-top:38px; } nav { display:grid; grid-template-columns:1fr 1fr; } nav a { font-size:.9rem; padding:9px 10px; } .hero-card,.about-card,.section-card { border-radius:24px; } .assignment-grid { grid-template-columns:1fr; } .assignment-card { border-radius:22px; padding:19px; } .profile-photo-wrap { border-width:6px; border-radius:26px; } }
+</style>
+</head>
+<body>
+<header class="page-wrap">
+<h1>Alexus Adkins: Writing Profile</h1>
+<div class="subtitle-line" aria-hidden="true"></div>
+<nav aria-label="Portfolio sections"><a href="#about">About</a><a href="#technical">Technical</a><a href="#literary">Literary</a><a href="#creative">Creative</a><a href="#political">Political</a></nav>
+</header>
+<main class="page-wrap">
+<section class="hero-card" aria-labelledby="overview-heading">
+<div><h2 id="overview-heading">Overview</h2><p>My name is Alexus Adkins, and I have completed my education from Indiana University East with a Bachelor of Arts in English with a concentration in Technical and Professional Writing. This portfolio is a collection of some of my favorite writing assignments throughout my four years at IU East.</p></div>
+<div class="profile-photo-wrap"><img src="alexus-profile-photo.webp" alt="Alexus Adkins smiling in glasses" /></div>
+</section>
+<section id="about" class="about-card" aria-labelledby="about-heading">
+<h2 id="about-heading">About Me</h2>
+<div class="about-grid"><div><h3>Experience Highlights</h3><ul><li>Web Accessibility Volunteer for The League of Women Voters of Kentucky</li><li>Library Page at the Louisville Free Public Library for Louisville Metro Government</li><li>Coursework in technical editing, professional writing, writing for the web, and advanced technical writing</li></ul></div>
+<div><h3>Skills Overview</h3><div class="skills"><span class="skill-pill">Technical editing and proofreading</span><span class="skill-pill">Microsoft Office Suite</span><span class="skill-pill">Chicago Manual of Style and AP Stylebook</span><span class="skill-pill">Collaboration with SMEs</span><span class="skill-pill">Web Content Accessibility Guidelines</span><span class="skill-pill">Clear, concise writing and attention to detail</span></div></div></div>
+</section>
+<h2 class="assignments-heading">Writing Assignments</h2>
+<section id="technical" class="section-card" aria-labelledby="technical-heading">
+<h3 id="technical-heading">Technical Writing-Based Pieces</h3>
+<div class="assignment-grid">
+<article class="assignment-card">
+<h4>Authoring with Adobe FrameMaker</h4>
+<p>This formal report examined Adobe FrameMaker and its role in technical writing and content authoring. The project analyzed structured authoring, templates, multichannel publishing, and importing/linking while explaining how these tools support technical writers in professional publishing environments.</p>
+<a class="assignment-button" href="pdfs/Authoring with Adobe FrameMaker.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+<article class="assignment-card">
+<h4>Mock Grant Proposal</h4>
+<p>This mock grant proposal was written on behalf of the Foundation of the Louisville Free Public Library to request $10,000 for the purchase of 500 new books. Although created for an academic assignment, it used real research, statistics, community information, and funding details that would be required in an authentic grant application.</p>
+<a class="assignment-button" href="pdfs/Mock Grant Proposal.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+<article class="assignment-card">
+<h4>Technical Description</h4>
+<p>This technical description explains the design, features, and functionality of Apple AirPods for college students and young adults considering wireless earbuds. It demonstrates audience awareness, organization, and clear technical communication.</p>
+<a class="assignment-button" href="pdfs/Technical Description.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+</div>
+</section><section id="literary" class="section-card" aria-labelledby="literary-heading">
+<h3 id="literary-heading">Literary Essay Pieces</h3>
+<div class="assignment-grid">
+<article class="assignment-card">
+<h4>Literary Friendships Essay</h4>
+<p>This comparative literary analysis explores how friendship shapes identity and emotional development in We Were Liars and The Hate U Give. It combines close textual analysis with themes of identity, racism, class, grief, and belonging.</p>
+<a class="assignment-button" href="pdfs/Literary Friendships Essay.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+<article class="assignment-card">
+<h4>Queer Coded Poetry Essay</h4>
+<p>This essay analyzes how Victorian poets disguised queer desire through coded language, metaphor, emotional intimacy, and alternative settings because open discussion of same-sex attraction was socially dangerous during the Victorian era.</p>
+<a class="assignment-button" href="pdfs/Queer Coded Poetry Essay.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+<article class="assignment-card">
+<h4>Feminist Poetics Essay</h4>
+<p>This comparative literary analysis examines how Emily Dickinson and Emma Lazarus used poetic form to challenge nineteenth-century expectations of women through feminist criticism and historical context.</p>
+<a class="assignment-button" href="pdfs/Feminist Poetics Essay.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+</div>
+</section><section id="creative" class="section-card" aria-labelledby="creative-heading">
+<h3 id="creative-heading">Creative Writing Pieces</h3>
+<div class="assignment-grid">
+<article class="assignment-card">
+<h4>Fiction Short Story</h4>
+<p>This short story follows an isolated man reflecting on his life while suffering a fatal heart attack alone in his childhood home. The narrative explores regret, avoidance, loneliness, and personal responsibility.</p>
+<a class="assignment-button" href="pdfs/Fiction Short Story.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+<article class="assignment-card">
+<h4>Dialogue Story</h4>
+<p>This dialogue-centered story follows two former acquaintances, Ynez and Kalila, whose reunion turns into a tense political argument about war, nationalism, and prejudice.</p>
+<a class="assignment-button" href="pdfs/Dialogue Story.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+<article class="assignment-card">
+<h4>Poem</h4>
+<p>This poem explores longing, lost dreams, and identity through the speaker’s childhood desire to become a gymnast, reflecting on how parental expectations can distance someone from what they truly love.</p>
+<a class="assignment-button" href="pdfs/Poem.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+</div>
+</section><section id="political" class="section-card" aria-labelledby="political-heading">
+<h3 id="political-heading">Political Writing Pieces</h3>
+<div class="assignment-grid">
+<article class="assignment-card">
+<h4>Budget Recommendations Memo</h4>
+<p>This professional memo presents policy recommendations regarding federal spending reforms for Representative Pat Ryan. It demonstrates policy analysis, audience awareness, and formal political communication skills.</p>
+<a class="assignment-button" href="pdfs/Budget Recommendations Memo.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+<article class="assignment-card">
+<h4>Mock Floor Speech</h4>
+<p>This mock congressional floor speech was written from the perspective of Raphael Warnock in support of the State Department Disability Policy and Accommodations Act. It demonstrates persuasive political rhetoric and formal legislative language.</p>
+<a class="assignment-button" href="pdfs/Mock Floor Speech.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+<article class="assignment-card">
+<h4>Mock Press Release</h4>
+<p>This mock press release was written in the style of official press releases published by Raphael Warnock’s website. It imitates the structure, tone, formatting, and messaging used in political media communications.</p>
+<a class="assignment-button" href="pdfs/Mock Press Release.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+</article>
+</div>
+</section>
+</main>
+<footer>
+<div class="footer-icons">
+<a href="https://www.linkedin.com/in/alexus-adkins" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.48 1s2.5 1.12 2.5 2.5zM.25 8h4.5v15.5H.25V8zm7.25 0h4.3v2.12h.06c.6-1.13 2.06-2.32 4.24-2.32 4.54 0 5.38 2.99 5.38 6.88v8.82h-4.5v-7.82c0-1.86-.03-4.25-2.59-4.25-2.6 0-3 2.03-3 4.12v7.95h-4.5V8z"></path></svg></a>
+<a href="mailto:alexusadkins01@icloud.com" aria-label="Email Alexus Adkins"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="m22 6-10 7L2 6"></path></svg></a>
+</div>
+<p>© 2026 Alexus Adkins • Writing Portfolio</p>
+</footer>
+</body>
+</html>
